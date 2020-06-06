@@ -1,0 +1,12 @@
+apiversion: v1
+kind: pod
+metadata:
+   name: nodeapp
+   lables:
+     app: nodeapp
+spec:
+   containers:
+   - name: web-cont
+     image: ankababu/k8s
+     ports:
+     - containerport: 8088
