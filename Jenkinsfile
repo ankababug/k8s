@@ -30,12 +30,12 @@ pipeline {
     stage('deploy to k8s') {
       steps{
         sshagent(['kops-machine']){
-          sh "scp -o StrictHostKeyChecking=no pods.yml centos@172.31.37.114:/home/centos/"
+          sh "scp -o StrictHostKeyChecking=no pods.yml root@172.31.39.237:/home/centos/"
           script{
               try{
-                 sh "ssh centos@172.31.37.114 sudo kubectl apply -f ."
+                 sh "ssh root@172.31.39.237 kubectl apply -f ."
               }catch(error){
-                 sh "ssh centos@172.31.37.114 sudo kubectl create -f ."
+                 sh "ssh root@172.31.39.237 kubectl create -f ."
               }
            }
         }
