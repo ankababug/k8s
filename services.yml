@@ -1,10 +1,10 @@
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
    name: nodeapp
 spec:
   selector:
-   app: nodeapp
+    app: nodeapp
   type: LoadBalancer
   ports:
   - protocol: tcp
