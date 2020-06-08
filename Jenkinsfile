@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "ankababu/k8s"
+    registry = "ankababu/k8s-java"
     registryCredential = 'docker-hub'
     dockerImage = ''
   }
