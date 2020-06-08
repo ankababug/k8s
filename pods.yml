@@ -1,12 +1,12 @@
-apiversion: v1
-kind: pod
+apiVersion: v1
+kind: Pod
 metadata:
-   name: nodeapp
-   lables:
-     app: nodeapp
+  name: nodeapp
+  labels:
+    name: nodeapp
 spec:
-   containers:
-   - name: web-cont
-     image: ankababu/k8s
-     ports:
-     - containerport: 8088
+  containers:
+  - name: web-cont
+    image: ankababu/k8s
+    ports:
+    - containerPort: 8088
